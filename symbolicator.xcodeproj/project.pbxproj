@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -154,6 +154,7 @@
 		732614F7194577F500DC069E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = NO;
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0820;
@@ -166,11 +167,13 @@
 				};
 			};
 			buildConfigurationList = 732614FA194577F500DC069E /* Build configuration list for PBXProject "symbolicator" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
+				Base,
 			);
 			mainGroup = 732614F6194577F500DC069E;
 			productRefGroup = 73261500194577F500DC069E /* Products */;
@@ -251,7 +254,14 @@
 		73261504194577F500DC069E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ADDITIONAL_SDKS[arch=*]" = "";
+				"ALTERNATE_GROUP[sdk=*]" = "$(INSTALL_GROUP)";
+				"ALTERNATE_MODE[sdk=*]" = "$(INSTALL_MODE_FLAG)";
+				"ALTERNATE_OWNER[sdk=*]" = "$(INSTALL_OWNER)";
+				"ALTERNATE_PERMISSIONS_FILES[sdk=*]" = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
+				"BUILD_VARIANTS[sdk=*]" = normal;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -268,8 +278,15 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				"DEBUG_INFORMATION_FORMAT[sdk=*]" = "dwarf-with-dsym";
+				"DEPLOYMENT_LOCATION[sdk=*]" = NO;
+				"DEPLOYMENT_POSTPROCESSING[sdk=*]" = NO;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				"DRIVERKIT_DEPLOYMENT_TARGET[arch=*]" = 19.0;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_SOURCE_FILE_NAMES[arch=*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -279,24 +296,41 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				"GCC_VERSION[arch=*]" = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				"GENERATE_PROFILING_CODE[sdk=*]" = NO;
+				"INCLUDED_SOURCE_FILE_NAMES[arch=*]" = "";
+				"INSTALL_GROUP[sdk=*]" = "$(GROUP)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				"SDKROOT[arch=*]" = macosx;
+				"STRIPFLAGS[sdk=*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 13.3;
+				"VALID_ARCHS[sdk=*]" = "i386 x86_64";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Debug;
 		};
 		73261505194577F500DC069E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ADDITIONAL_SDKS[arch=*]" = "";
+				"ALTERNATE_GROUP[sdk=*]" = "$(INSTALL_GROUP)";
+				"ALTERNATE_MODE[sdk=*]" = "$(INSTALL_MODE_FLAG)";
+				"ALTERNATE_OWNER[sdk=*]" = "$(INSTALL_OWNER)";
+				"ALTERNATE_PERMISSIONS_FILES[sdk=*]" = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
+				"BUILD_VARIANTS[sdk=*]" = normal;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -314,20 +348,39 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				"DEBUG_INFORMATION_FORMAT[sdk=*]" = "dwarf-with-dsym";
+				"DEPLOYMENT_LOCATION[sdk=*]" = NO;
+				"DEPLOYMENT_POSTPROCESSING[sdk=*]" = NO;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				"DRIVERKIT_DEPLOYMENT_TARGET[arch=*]" = 19.0;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_SOURCE_FILE_NAMES[arch=*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				"GCC_VERSION[arch=*]" = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				"GENERATE_PROFILING_CODE[sdk=*]" = NO;
+				"INCLUDED_SOURCE_FILE_NAMES[arch=*]" = "";
+				"INSTALL_GROUP[sdk=*]" = "$(GROUP)";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				"SDKROOT[arch=*]" = macosx;
+				"STRIPFLAGS[sdk=*]" = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 13.3;
+				"VALID_ARCHS[sdk=*]" = "i386 x86_64";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Release;
 		};
@@ -335,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6BA76753D3441E88F04772E /* Pods.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "symbolicator/symbolicator-Bridging-Header.h";
@@ -346,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6BA76753D3441E88F04772E /* Pods.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "symbolicator/symbolicator-Bridging-Header.h";
